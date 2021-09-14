@@ -63,3 +63,25 @@ neg["r"] = [x*-1 for x in neg["r"]]
 neg = neg.sort_values(by='r', ascending=False)
 print("Feature correlations with negative class")
 print(neg)
+
+'''
+Output:
+
+               text  label
+0        I am happy      1
+1          I am sad      0
+2     Feeling great      1
+3     Feeling awful      0
+4  This is the best      1 
+
+Feature correlations with positive class
+  features         r   p-value
+5    happy  0.408248  0.495025
+2     best  0.408248  0.495025
+4    great  0.408248  0.495025
+
+Feature correlations with negative class
+  features         r   p-value
+0    awful  0.612372  0.272228
+1      sad  0.612372  0.272228
+'''
